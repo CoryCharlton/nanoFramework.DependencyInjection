@@ -18,6 +18,7 @@
     <NF_IsCoreLibrary>True</NF_IsCoreLibrary>
     <DocumentationFile>bin\$(Configuration)\nanoFramework.DependencyInjection.xml</DocumentationFile>
     <LangVersion>default</LangVersion>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -64,6 +65,9 @@
     <Reference Include="nanoFramework.System.Runtime">
       <HintPath>..\packages\nanoFramework.System.Runtime.1.0.27\lib\nanoFramework.System.Runtime.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.lock.json" />
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
   <ProjectExtensions>
